@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+    .a{
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 70px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+    body{
+      background-color:#9FE2BF;
+    }
+
+  
+  </style>
+</head>
+<body>
+    <form action="aud" method = "post" enctype="multipart/form-data"> 
+        {% csrf_token %} 
+        {{ form }} 
+       <button><a href="{% url 'aud' %}">Upload</button> </a>
+        
+    </form>
+    <h2 align="center"><a href="{% url 'play_audio' %}"><button class="a">Play Audio</button></h2></a>
+</body>
+</html>
